@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A0F"/>
+      <stop offset="100%" style="stop-color:#12121A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5CE1FF"/>
+      <stop offset="100%" style="stop-color:#7C5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="300" cy="250" r="100" fill="url(#accent)" opacity="0.1"/>
+  <circle cx="500" cy="350" r="80" fill="url(#accent)" opacity="0.08"/>
+  <path d="M200,350 Q400,100 600,350" fill="none" stroke="#5CE1FF" stroke-opacity="0.2" stroke-width="3"/>
+  <rect x="250" y="200" width="300" height="200" rx="16" fill="#12121A" stroke="#5CE1FF" stroke-opacity="0.15"/>
+  <text x="400" y="480" font-family="sans-serif" font-size="28" font-weight="bold" fill="#5CE1FF" text-anchor="middle">PRAKRIDA 2K25</text>
+  <text x="400" y="520" font-family="sans-serif" font-size="14" fill="#6b6b80" text-anchor="middle">Sports Festival Platform</text>
+</svg>
