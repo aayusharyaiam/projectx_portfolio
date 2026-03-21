@@ -102,6 +102,6 @@ The portfolio currently showcases:
 - **Prakrida 2k25**: Sports Festival Platform (React, Express, PostgreSQL).
 
 Developer Profiles:
-- Aayush Arya (Lead Developer & Founder)
-- Ikrish (Frontend Engineer & Designer)
-- Ashutosh (Backend Engineer)
+- Aayush Arya (Full Stack)
+- Ashutosh Kumar (UI/UX & Backend)
+- Krish Agarwal (Full Stack)

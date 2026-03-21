@@ -161,7 +161,7 @@ export default function Contact() {
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="flex -space-x-2">
-                    {['AA', 'IK', 'AS'].map((init, i) => (
+                    {['AA', 'AK', 'KA'].map((init, i) => (
                       <div
                         key={i}
                         className="w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center text-white text-xs font-bold ring-2 ring-background"
