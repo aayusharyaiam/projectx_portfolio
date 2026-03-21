@@ -5,8 +5,6 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    projectType: '',
-    budget: '',
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
@@ -89,45 +87,7 @@ export default function Contact() {
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <label htmlFor="contact-project-type" className="block text-sm font-bold text-surface-300 mb-2">
-                          Project Type
-                        </label>
-                        <select
-                          id="contact-project-type"
-                          name="projectType"
-                          value={formData.projectType}
-                          onChange={handleChange}
-                          className="w-full px-4 py-3.5 bg-surface-900 border border-surface-700 rounded-xl text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none"
-                        >
-                          <option value="" className="text-surface-600">Select type</option>
-                          <option value="web-platform">Web Platform</option>
-                          <option value="mobile-app">Mobile App</option>
-                          <option value="design-system">Design System</option>
-                          <option value="consulting">Consulting</option>
-                          <option value="other">Other</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label htmlFor="contact-budget" className="block text-sm font-bold text-surface-300 mb-2">
-                          Budget Range
-                        </label>
-                        <select
-                          id="contact-budget"
-                          name="budget"
-                          value={formData.budget}
-                          onChange={handleChange}
-                          className="w-full px-4 py-3.5 bg-surface-900 border border-surface-700 rounded-xl text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none"
-                        >
-                          <option value="" className="text-surface-600">Select budget</option>
-                          <option value="5k-15k">₹5K - ₹15K</option>
-                          <option value="15k-50k">₹15K - ₹50K</option>
-                          <option value="50k-100k">₹50K - ₹1L</option>
-                          <option value="100k+">₹1L+</option>
-                        </select>
-                      </div>
-                    </div>
+
 
                     <div>
                       <label htmlFor="contact-message" className="block text-sm font-bold text-surface-300 mb-2">
@@ -216,25 +176,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="glass-card glow-border rounded-2xl p-8">
-                <h3 className="text-lg font-bold text-white font-display mb-4">Follow Us</h3>
-                <div className="flex gap-3">
-                  {[
-                    { icon: 'code', label: 'GitHub' },
-                    { icon: 'public', label: 'Twitter' },
-                    { icon: 'person', label: 'LinkedIn' },
-                  ].map((social, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className="w-12 h-12 rounded-xl bg-surface-800 flex items-center justify-center text-surface-400 hover:text-primary hover:bg-surface-700 transition-colors"
-                      aria-label={social.label}
-                    >
-                      <span className="material-symbols-outlined text-xl">{social.icon}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
+
             </div>
           </div>
         </AnimatedSection>

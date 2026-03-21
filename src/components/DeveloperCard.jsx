@@ -8,14 +8,25 @@ export default function DeveloperCard({ developer, index }) {
     >
       {/* Avatar */}
       <div className="relative mb-6">
+        {developer.avatar ? (
+          <div className="relative w-24 h-24 mx-auto z-10">
+            <img
+              src={developer.avatar}
+              alt={developer.name}
+              className="w-full h-full object-cover rounded-2xl relative z-10 border border-white/10"
+              style={{ backgroundColor: 'transparent' }}
+            />
+          </div>
+        ) : (
+          <div
+            className="w-24 h-24 rounded-2xl flex items-center justify-center text-3xl font-bold font-display text-white mx-auto relative z-10"
+            style={{ background: `linear-gradient(135deg, ${developer.color}40, ${developer.color}15)` }}
+          >
+            {initials}
+          </div>
+        )}
         <div
-          className="w-24 h-24 rounded-2xl flex items-center justify-center text-3xl font-bold font-display text-white mx-auto"
-          style={{ background: `linear-gradient(135deg, ${developer.color}40, ${developer.color}15)` }}
-        >
-          {initials}
-        </div>
-        <div
-          className="absolute -inset-2 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity"
+          className="absolute -inset-2 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity z-0"
           style={{ backgroundColor: developer.color }}
         />
       </div>
@@ -23,13 +34,22 @@ export default function DeveloperCard({ developer, index }) {
       {/* Info */}
       <div className="text-center mb-6">
         <h3 className="text-xl font-bold text-white font-display mb-1">{developer.name}</h3>
-        <p className="text-sm font-medium" style={{ color: developer.color }}>{developer.role}</p>
-        <p className="text-surface-400 text-sm mt-3 leading-relaxed">{developer.bio}</p>
+        {developer.role && (
+          <p className="text-sm font-medium" style={{ color: developer.color }}>{developer.role}</p>
+        )}
+        {(developer.branch || developer.year) && (
+          <p className="text-surface-400 text-xs mt-1">
+            {developer.branch} {developer.branch && developer.year && '·'} {developer.year}
+          </p>
+        )}
+        {developer.bio && (
+          <p className="text-surface-400 text-sm mt-3 leading-relaxed">{developer.bio}</p>
+        )}
       </div>
 
       {/* Skills */}
       <div className="flex flex-wrap justify-center gap-2 mb-6">
-        {developer.skills.map((skill) => (
+        {developer.skills && developer.skills.map((skill) => (
           <span
             key={skill}
             className="px-2.5 py-1 rounded-full bg-surface-800 text-surface-400 text-[10px] uppercase font-bold tracking-widest"
@@ -40,7 +60,7 @@ export default function DeveloperCard({ developer, index }) {
       </div>
 
       {/* Socials */}
-      <div className="flex justify-center gap-3">
+      <div className="flex justify-center flex-wrap gap-3">
         {developer.socials.github && (
           <a
             href={developer.socials.github}
@@ -72,6 +92,28 @@ export default function DeveloperCard({ developer, index }) {
             aria-label={`${developer.name} Twitter`}
           >
             <span className="material-symbols-outlined text-lg">public</span>
+          </a>
+        )}
+        {developer.socials.instagram && (
+          <a
+            href={developer.socials.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-9 h-9 rounded-lg bg-surface-800 flex items-center justify-center text-surface-400 hover:text-primary hover:bg-surface-700 transition-colors"
+            aria-label={`${developer.name} Instagram`}
+          >
+            <span className="material-symbols-outlined text-lg">photo_camera</span>
+          </a>
+        )}
+        {developer.socials.email && (
+          <a
+            href={developer.socials.email}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-9 h-9 rounded-lg bg-surface-800 flex items-center justify-center text-surface-400 hover:text-primary hover:bg-surface-700 transition-colors"
+            aria-label={`Email ${developer.name}`}
+          >
+            <span className="material-symbols-outlined text-lg">mail</span>
           </a>
         )}
       </div>

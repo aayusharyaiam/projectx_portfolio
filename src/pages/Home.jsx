@@ -13,21 +13,9 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
   const heroRef = useRef(null)
-  const floatingCardRef = useRef(null)
   const parallaxRef = useRef(null)
 
   useEffect(() => {
-    // Floating card animation
-    if (floatingCardRef.current) {
-      gsap.to(floatingCardRef.current, {
-        y: -15,
-        duration: 3,
-        ease: 'sine.inOut',
-        yoyo: true,
-        repeat: -1,
-      })
-    }
-
     // Parallax background glow
     if (parallaxRef.current) {
       gsap.to(parallaxRef.current, {
@@ -67,8 +55,8 @@ export default function Home() {
         <div className="absolute inset-0 grid-bg pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 w-full">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="flex flex-col gap-8">
+          <div className="flex flex-col items-center justify-center text-center">
+            <div className="flex flex-col items-center gap-8 max-w-4xl mx-auto">
               {/* Badge */}
               <div className="hero-fade inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 w-fit">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -80,16 +68,16 @@ export default function Home() {
               {/* Split Text Hero */}
               <SplitText
                 text="Building Digital Products That Actually Matter"
-                className="text-5xl lg:text-7xl font-bold leading-[1.08] tracking-tight text-white font-display"
+                className="text-5xl lg:text-7xl font-bold leading-[1.08] tracking-tight text-white font-display text-center"
                 highlightWords={['Actually', 'Matter']}
               />
 
-              <p className="hero-fade text-lg text-surface-400 max-w-lg leading-relaxed">
+              <p className="hero-fade text-lg text-surface-400 max-w-2xl mx-auto leading-relaxed">
                 We partner with ambitious startups to design and engineer world-class digital
                 experiences with a focus on performance, precision, and scalability.
               </p>
 
-              <div className="hero-fade flex flex-wrap gap-4">
+              <div className="hero-fade flex flex-wrap justify-center gap-4">
                 <Link
                   to="/contact"
                   className="bg-gradient-primary text-white px-8 py-4 rounded-xl font-bold text-lg glow-hover"
@@ -102,49 +90,6 @@ export default function Home() {
                 >
                   View our work
                 </Link>
-              </div>
-            </div>
-
-            {/* Floating Hero Card */}
-            <div className="relative group hidden lg:block">
-              <div className="absolute -inset-8 bg-primary/20 rounded-[2rem] blur-3xl opacity-20 group-hover:opacity-40 animate-glow-pulse transition-opacity" />
-              <div
-                ref={floatingCardRef}
-                className="relative rounded-3xl overflow-hidden border border-surface-700 bg-card shadow-2xl"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
-                <div className="aspect-square bg-gradient-to-br from-surface-900 to-background flex items-center justify-center p-12">
-                  <div className="text-center space-y-6">
-                    <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-primary flex items-center justify-center">
-                      <span className="material-symbols-outlined text-white text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>
-                        rocket_launch
-                      </span>
-                    </div>
-                    <div>
-                      <p className="text-2xl font-bold text-white font-display">Ship Faster</p>
-                      <p className="text-surface-400 text-sm mt-1">From concept to production</p>
-                    </div>
-                    <div className="flex gap-3 justify-center">
-                      {['React', 'Node', 'GSAP'].map(t => (
-                        <span key={t} className="px-3 py-1 rounded-full bg-surface-800 text-surface-400 text-xs font-medium">{t}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute bottom-6 left-6 right-6 p-5 glass-card rounded-2xl">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                      <span className="material-symbols-outlined text-primary">auto_awesome</span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-white">Engineering Excellence</p>
-                      <p className="text-xs text-surface-400">99.9% Uptime SLA</p>
-                    </div>
-                  </div>
-                  <div className="h-1 w-full bg-surface-800 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-primary w-[92%]" />
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -224,7 +169,7 @@ export default function Home() {
           <AnimatedSection stagger className="grid md:grid-cols-4 gap-12">
             {processSteps.map((step, i) => (
               <div key={i} className="relative">
-                <div className="text-6xl font-black text-surface-800 absolute -top-10 -left-4 select-none font-display">
+                <div className="text-6xl font-black text-surface-600 absolute -top-10 -left-4 select-none font-display">
                   {step.number}
                 </div>
                 <div className="relative">
