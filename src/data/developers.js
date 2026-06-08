@@ -1,13 +1,13 @@
+import ashutoshImg from '../assets/developers/ashutosh.jpeg'
+
 export const developers = [
   {
     id: 1,
     name: 'Aayush Arya',
     role: 'Full Stack',
-    branch: 'ECE',
-    year: '2nd Year',
     bio: 'Curious builder who works across the stack, with interest in clean interfaces, smart app development, and creative automation.',
     skills: ['React', 'Next.js', 'Node.js', 'TypeScript', 'GSAP', 'Three.js', 'MongoDB', 'PostgreSQL'],
-    avatar: 'images/devs/aayush.png',
+    avatar: null,
     socials: {
       github: 'https://github.com/AayushArya28',
       linkedin: 'https://www.linkedin.com/in/aayusharyaiam/',
@@ -19,12 +19,10 @@ export const developers = [
   {
     id: 2,
     name: 'Ashutosh Kumar',
-    role: 'UI/UX & Backend',
-    branch: 'ECE',
-    year: '2nd Year',
+    role: 'UI/UX & Backend & Database',
     bio: 'I am an engineering student passionate about UI/UX, Backend, automation and building innovative tech projects that blend creativity and real impact.',
-    skills: ['Node.js', 'Python', 'Go', 'Figma', 'UI/UX', 'Docker', 'AWS'],
-    avatar: 'images/devs/ashu.png',
+    skills: ['Node.js', 'Python', 'Java', 'Figma', 'UI/UX', 'Selenium', 'MongoDB', 'PostgreSQL'],
+    avatar: ashutoshImg,
     socials: {
       github: 'https://github.com/Ashutosh9470',
       linkedin: 'https://www.linkedin.com/in/ashutosh-kumar-3624b332a/',
@@ -37,11 +35,9 @@ export const developers = [
     id: 3,
     name: 'Krish Agarwal',
     role: 'Full Stack',
-    branch: 'CSE',
-    year: '2nd Year',
     bio: 'Exploring new tech and an enthusiastic developer. Full Stack Developer with a tinge of UI/UX, apps, bots and automation.',
     skills: ['React', 'Node.js', 'TypeScript', 'UI/UX', 'Bots', 'Automation'],
-    avatar: 'images/devs/krish.png',
+    avatar: null,
     socials: {
       github: 'https://github.com/ikrishagarwal',
       linkedin: 'https://www.linkedin.com/in/ikrishagarwal/',

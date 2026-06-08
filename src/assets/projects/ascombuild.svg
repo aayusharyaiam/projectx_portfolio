@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#08090C"/>
+      <stop offset="100%" style="stop-color:#12141C"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFA000"/>
+      <stop offset="100%" style="stop-color:#FF5722"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Architectural grid lines in background -->
+  <g opacity="0.08" stroke="#FFA000" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="600" />
+    <line x1="200" y1="0" x2="200" y2="600" />
+    <line x1="300" y1="0" x2="300" y2="600" />
+    <line x1="400" y1="0" x2="400" y2="600" />
+    <line x1="500" y1="0" x2="500" y2="600" />
+    <line x1="600" y1="0" x2="600" y2="600" />
+    <line x1="700" y1="0" x2="700" y2="600" />
+    
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    <line x1="0" y1="500" x2="800" y2="500" />
+  </g>
+
+  <!-- Glowing background circles -->
+  <circle cx="400" cy="260" r="140" fill="url(#accent)" opacity="0.06" filter="blur(20px)"/>
+  
+  <!-- Isometric construction frame representation -->
+  <g transform="translate(400, 240)">
+    <!-- Main building skeleton lines -->
+    <path d="M-100,80 L0,130 L100,80 L100,-80 L0,-130 L-100,-80 Z" fill="none" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.3"/>
+    <path d="M-100,80 L0,30 L100,80 M0,30 L0,-130 M-100,-80 L0,-30 L100,-80" fill="none" stroke="url(#accent)" stroke-width="1.5" stroke-opacity="0.25"/>
+    
+    <!-- Outer crane/scaffolding lines -->
+    <line x1="-150" y1="120" x2="-150" y2="-120" stroke="#FFA000" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="4,4"/>
+    <line x1="-150" y1="-80" x2="-80" y2="-120" stroke="#FFA000" stroke-width="2" stroke-opacity="0.4"/>
+    <line x1="-150" y1="-40" x2="-80" y2="-80" stroke="#FFA000" stroke-width="1.5" stroke-opacity="0.25"/>
+    <line x1="-150" y1="0" x2="-80" y2="-40" stroke="#FFA000" stroke-width="1.5" stroke-opacity="0.25"/>
+    
+    <!-- Floating construction cubes -->
+    <polygon points="40,-40 70,-25 70,5 40,-10" fill="url(#accent)" opacity="0.6"/>
+    <polygon points="70,-25 100,-40 100,-10 70,5" fill="#FFA000" opacity="0.4"/>
+    <polygon points="40,-40 70,-55 100,-40 70,-25" fill="#FFD54F" opacity="0.7"/>
+
+    <polygon points="-60,-20 -30,-5 -30,25 -60,10" fill="url(#accent)" opacity="0.3"/>
+    <polygon points="-30,-5 0,-20 0,10 -30,25" fill="#FFA000" opacity="0.2"/>
+    <polygon points="-60,-20 -30,-35 0,-20 -30,-5" fill="#FFD54F" opacity="0.4"/>
+  </g>
+
+  <!-- Labels -->
+  <text x="400" y="480" font-family="sans-serif" font-size="32" font-weight="bold" fill="#FFA000" text-anchor="middle" letter-spacing="2">ASCOMBUILD</text>
+  <text x="400" y="525" font-family="sans-serif" font-size="16" fill="#8C8C9E" text-anchor="middle" letter-spacing="1">Construction Company Website</text>
+</svg>

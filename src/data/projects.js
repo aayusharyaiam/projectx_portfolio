@@ -1,6 +1,11 @@
 import technika25Img from '../assets/projects/technika25.svg'
 import technika24Img from '../assets/projects/technika24.svg'
 import prakrida25Img from '../assets/projects/prakrida25.svg'
+import ascombuildImg from '../assets/projects/ascombuild.svg'
+import kenjalImg from '../assets/projects/kenjal.svg'
+import bitpAiml1Img from '../assets/projects/bitp_aiml_1.svg'
+import bitpAiml2Img from '../assets/projects/bitp_aiml_2.svg'
+import instabotImg from '../assets/projects/instabot.svg'
 
 export const projects = [
   {
@@ -55,6 +60,96 @@ export const projects = [
       participants: '4,200+',
       sports: '25+',
       matches: '150+',
+    },
+  },
+  {
+    id: 4,
+    title: 'Ascombuild',
+    subtitle: 'Construction Company Website',
+    description:
+      'A modern corporate website designed for Ascombuild construction company. Features an interactive project showcase, structural service catalogues, dynamic contact queries, and a fully custom isometric design system.',
+    image: ascombuildImg,
+    tags: ['React', 'GSAP', 'Vanilla CSS', 'Responsive Design'],
+    category: 'Corporate Website',
+    year: '2025',
+    link: null,
+    color: '#FFA000',
+    stats: {
+      projects: '50+',
+      clients: '30+',
+      views: '10k+',
+    },
+  },
+  {
+    id: 5,
+    title: 'Kenjal',
+    subtitle: 'Water Treatment Products E-commerce',
+    description:
+      'A digital storefront and corporate portal for Kenjal, a leading water treatment plant manufacturer. Offers seamless product catalog browsing, quote requests, filtration system specifications, and client onboarding.',
+    image: kenjalImg,
+    tags: ['Next.js', 'TailwindCSS', 'Node.js', 'MongoDB', 'Stripe'],
+    category: 'E-commerce & Portal',
+    year: '2026',
+    link: null,
+    color: '#00F2FE',
+    stats: {
+      products: '120+',
+      orders: '1,500+',
+      conversion: '4.2%',
+    },
+  },
+  {
+    id: 6,
+    title: 'BITP AI/ML 2024',
+    subtitle: '1st International Conference Platform',
+    description:
+      'The official web portal for the first international conference of BITP on Artificial Intelligence and Machine Learning. Supported paper submission workflows, peer review notifications, speaker registrations, and live presentation streams.',
+    image: bitpAiml1Img,
+    tags: ['React', 'Framer Motion', 'Node.js', 'Express', 'MySQL'],
+    category: 'Conference Platform',
+    year: '2024',
+    link: null,
+    color: '#F43F5E',
+    stats: {
+      attendees: '1,200+',
+      papers: '350+',
+      speakers: '45+',
+    },
+  },
+  {
+    id: 7,
+    title: 'BITP AI/ML 2025',
+    subtitle: '2nd International Conference Platform',
+    description:
+      'An upgraded version of the BITP conference platform featuring automated review assignments, intelligent session scheduling, multi-track virtual streaming, and improved accessibility features for researchers worldwide.',
+    image: bitpAiml2Img,
+    tags: ['Next.js', 'PostgreSQL', 'TailwindCSS', 'GraphQL', 'AWS'],
+    category: 'Conference Platform',
+    year: '2025',
+    link: null,
+    color: '#10B981',
+    stats: {
+      attendees: '2,100+',
+      papers: '580+',
+      speakers: '70+',
+    },
+  },
+  {
+    id: 8,
+    title: 'InstaBot',
+    subtitle: 'Instagram Engagement Automation',
+    description:
+      'A high-performance engagement automation system tailored for Instagram. Optimizes response rates, automates comments, manages direct messages based on keyword triggers, and increases organic follower reach safely.',
+    image: instabotImg,
+    tags: ['Python', 'Selenium', 'Node.js', 'Redis', 'Instagram API'],
+    category: 'Automation Tool',
+    year: '2026',
+    link: null,
+    color: '#F77737',
+    stats: {
+      messages: '500k+',
+      hours: '80h/mo',
+      growth: '24% avg',
     },
   },
 ]
