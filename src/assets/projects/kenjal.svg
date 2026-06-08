@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050A14"/>
+      <stop offset="100%" style="stop-color:#0D1627"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00F2FE"/>
+      <stop offset="100%" style="stop-color:#4FACFE"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- Concentric glowing water ripples in background -->
+  <circle cx="400" cy="250" r="180" fill="none" stroke="url(#accent)" stroke-opacity="0.05" stroke-width="1.5" />
+  <circle cx="400" cy="250" r="130" fill="none" stroke="url(#accent)" stroke-opacity="0.08" stroke-width="2" />
+  <circle cx="400" cy="250" r="80" fill="none" stroke="url(#accent)" stroke-opacity="0.12" stroke-width="3" />
+
+  <!-- Fluid wave lines -->
+  <path d="M 150 320 C 250 280, 300 360, 400 320 C 500 280, 550 360, 650 320" fill="none" stroke="url(#accent)" stroke-opacity="0.2" stroke-width="3"/>
+  <path d="M 170 340 C 260 310, 310 380, 400 350 C 490 320, 540 380, 630 350" fill="none" stroke="url(#accent)" stroke-opacity="0.1" stroke-width="2"/>
+
+  <!-- Glassy Water Drop Icon in center -->
+  <g transform="translate(400, 230)">
+    <!-- Droplet background glow -->
+    <path d="M0,-80 C40,-20 60,10 60,40 C60,73 33,100 0,100 C-33,100 -60,73 -60,40 C-60,10 -40,-20 0,-80 Z" fill="url(#accent)" opacity="0.15" filter="blur(8px)"/>
+    <!-- Outer droplet border -->
+    <path d="M0,-80 C40,-20 60,10 60,40 C60,73 33,100 0,100 C-33,100 -60,73 -60,40 C-60,10 -40,-20 0,-80 Z" fill="none" stroke="url(#accent)" stroke-width="3" stroke-opacity="0.6"/>
+    <!-- Highlight shimmer -->
+    <path d="M-30,25 C-30,5 -15,-15 10,-45" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-opacity="0.4"/>
+    <!-- Water molecules / bubbles floating -->
+    <circle cx="-25" cy="-20" r="6" fill="#00F2FE" opacity="0.5" />
+    <circle cx="35" cy="-5" r="8" fill="#4FACFE" opacity="0.6" />
+    <circle cx="15" cy="50" r="10" fill="#00F2FE" opacity="0.7" />
+    <circle cx="-10" cy="65" r="5" fill="#FFFFFF" opacity="0.6" />
+  </g>
+
+  <!-- Labels -->
+  <text x="400" y="480" font-family="sans-serif" font-size="32" font-weight="bold" fill="#00F2FE" text-anchor="middle" letter-spacing="3">KENJAL</text>
+  <text x="400" y="525" font-family="sans-serif" font-size="16" fill="#8C8C9E" text-anchor="middle" letter-spacing="1">Water Treatment & Products</text>
+</svg>

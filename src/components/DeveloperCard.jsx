@@ -37,11 +37,6 @@ export default function DeveloperCard({ developer, index }) {
         {developer.role && (
           <p className="text-sm font-medium" style={{ color: developer.color }}>{developer.role}</p>
         )}
-        {(developer.branch || developer.year) && (
-          <p className="text-surface-400 text-xs mt-1">
-            {developer.branch} {developer.branch && developer.year && '·'} {developer.year}
-          </p>
-        )}
         {developer.bio && (
           <p className="text-surface-400 text-sm mt-3 leading-relaxed">{developer.bio}</p>
         )}

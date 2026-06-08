@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#090613"/>
+      <stop offset="100%" style="stop-color:#160D27"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C5CFF"/>
+      <stop offset="100%" style="stop-color:#F43F5E"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- Neural Net Background Grid -->
+  <g opacity="0.15">
+    <line x1="250" y1="180" x2="350" y2="150" stroke="#7C5CFF" stroke-width="1.5" />
+    <line x1="250" y1="180" x2="320" y2="280" stroke="#7C5CFF" stroke-width="1.5" />
+    <line x1="350" y1="150" x2="480" y2="170" stroke="#F43F5E" stroke-width="2" />
+    <line x1="320" y1="280" x2="480" y2="280" stroke="#7C5CFF" stroke-width="1.5" />
+    <line x1="480" y1="170" x2="550" y2="250" stroke="#F43F5E" stroke-width="1.5" />
+    <line x1="480" y1="280" x2="550" y2="250" stroke="#F43F5E" stroke-width="2" />
+    <line x1="350" y1="150" x2="480" y2="280" stroke="#7C5CFF" stroke-width="1" />
+    <line x1="320" y1="280" x2="480" y2="170" stroke="#7C5CFF" stroke-width="1" />
+  </g>
+
+  <!-- Glowing nodes -->
+  <circle cx="250" cy="180" r="8" fill="#7C5CFF" opacity="0.8" />
+  <circle cx="350" cy="150" r="10" fill="#F43F5E" opacity="0.9" />
+  <circle cx="320" cy="280" r="6" fill="#7C5CFF" opacity="0.7" />
+  <circle cx="480" cy="170" r="12" fill="#F43F5E" opacity="0.9" />
+  <circle cx="480" cy="280" r="8" fill="#7C5CFF" opacity="0.8" />
+  <circle cx="550" cy="250" r="10" fill="#F43F5E" opacity="0.9" />
+
+  <!-- Big Futuristic Number "1" or AI symbol -->
+  <g transform="translate(400, 220)">
+    <circle cx="0" cy="0" r="90" fill="url(#accent)" opacity="0.08" filter="blur(15px)"/>
+    <circle cx="0" cy="0" r="75" fill="none" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.3" stroke-dasharray="10, 5"/>
+    <text x="0" y="35" font-family="sans-serif" font-size="100" font-weight="900" fill="url(#accent)" text-anchor="middle" opacity="0.85">1</text>
+  </g>
+
+  <!-- Network wave ring -->
+  <path d="M 280 200 A 150 150 0 0 1 520 200" fill="none" stroke="url(#accent)" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="5, 5"/>
+
+  <!-- Labels -->
+  <text x="400" y="475" font-family="sans-serif" font-size="28" font-weight="bold" fill="#F43F5E" text-anchor="middle" letter-spacing="1">BITP AI/ML 2024</text>
+  <text x="400" y="520" font-family="sans-serif" font-size="16" fill="#8C8C9E" text-anchor="middle" letter-spacing="0.5">1st International Conference Platform</text>
+</svg>
