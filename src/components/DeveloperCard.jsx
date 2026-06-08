@@ -1,4 +1,7 @@
+import { useState } from 'react'
+
 export default function DeveloperCard({ developer, index }) {
+  const [isLoaded, setIsLoaded] = useState(false)
   const initials = developer.name.split(' ').map(n => n[0]).join('')
 
   return (
@@ -9,12 +12,18 @@ export default function DeveloperCard({ developer, index }) {
       {/* Avatar */}
       <div className="relative mb-6">
         {developer.avatar ? (
-          <div className="relative w-24 h-24 mx-auto z-10">
+          <div className="relative w-24 h-24 mx-auto z-10 overflow-hidden rounded-2xl border border-white/10 bg-surface-800/50">
+            {/* Skeletal Loading Animation */}
+            {!isLoaded && (
+              <div className="absolute inset-0 bg-gradient-to-r from-surface-800/0 via-surface-700/50 to-surface-800/0 animate-shimmer" style={{ backgroundSize: '200% 100%' }} />
+            )}
             <img
               src={developer.avatar}
               alt={developer.name}
-              className="w-full h-full object-cover rounded-2xl relative z-10 border border-white/10"
+              className={`w-full h-full object-cover relative z-10 transition-opacity duration-700 ease-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
               style={{ backgroundColor: 'transparent' }}
+              loading="lazy"
+              onLoad={() => setIsLoaded(true)}
             />
           </div>
         ) : (

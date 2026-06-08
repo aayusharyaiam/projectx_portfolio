@@ -6,8 +6,27 @@ import kenjalImg from '../assets/projects/kenjal.svg'
 import bitpAiml1Img from '../assets/projects/bitp_aiml_1.svg'
 import bitpAiml2Img from '../assets/projects/bitp_aiml_2.svg'
 import instabotImg from '../assets/projects/instabot.svg'
+import ieeeImg from '../assets/projects/ieee.svg'
 
 export const projects = [
+  {
+    id: 9,
+    title: 'IEEE SB BIT Patna',
+    subtitle: 'Official Frontend Repository',
+    description:
+      'The official frontend for the IEEE Student Branch at BIT Patna. Overhauled to deliver a production-grade, premium user experience featuring 1:1 Premium UI Replication of Lumina IEEE and Cybernetic Ether design systems.',
+    image: ieeeImg,
+    tags: ['React 18', 'Vite', 'Tailwind CSS', 'GSAP', 'React Router'],
+    category: 'Web Platform',
+    year: '2024',
+    link: 'https://github.com/aayusharyaiam/IEEE-web',
+    color: '#00629B',
+    stats: {
+      themes: 'Light/Dark',
+      layouts: '100% Resp.',
+      animations: 'GSAP',
+    },
+  },
   {
     id: 1,
     title: 'Technika 2k25',

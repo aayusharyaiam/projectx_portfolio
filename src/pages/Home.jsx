@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SplitText from '../components/SplitText'
-import StatsCounter from '../components/StatsCounter'
 import AnimatedSection from '../components/AnimatedSection'
 import ProjectCard from '../components/ProjectCard'
 import { projects } from '../data/projects'
-import { services, processSteps, stats, testimonials } from '../data/services'
+import { services, processSteps, testimonials } from '../data/services'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -92,13 +91,6 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-24">
-            {stats.map((stat, i) => (
-              <StatsCounter key={i} {...stat} />
-            ))}
           </div>
         </div>
       </section>

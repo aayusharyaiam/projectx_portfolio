@@ -1,4 +1,5 @@
 import ashutoshImg from '../assets/developers/ashutosh.jpeg'
+import aayushImg from '../assets/developers/aayush.jpg'
 
 export const developers = [
   {
@@ -7,9 +8,9 @@ export const developers = [
     role: 'Full Stack',
     bio: 'Curious builder who works across the stack, with interest in clean interfaces, smart app development, and creative automation.',
     skills: ['React', 'Next.js', 'Node.js', 'TypeScript', 'GSAP', 'Three.js', 'MongoDB', 'PostgreSQL'],
-    avatar: null,
+    avatar: aayushImg,
     socials: {
-      github: 'https://github.com/AayushArya28',
+      github: 'https://www.aayusharya.tech/',
       linkedin: 'https://www.linkedin.com/in/aayusharyaiam/',
       instagram: 'https://www.instagram.com/aayusharya_i_am/',
       email: 'mailto:aayush10738@gmail.com'

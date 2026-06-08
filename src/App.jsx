@@ -14,14 +14,26 @@ import Contact from './pages/Contact'
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => {
-    window.scrollTo(0, 0)
+    if (window.lenis) {
+      window.lenis.scrollTo(0, { immediate: true })
+    } else {
+      window.scrollTo(0, 0)
+    }
   }, [pathname])
   return null
 }
 
+function PageWrapper({ children }) {
+  const location = useLocation()
+  return (
+    <div key={location.pathname} className="page-transition w-full h-full">
+      {children}
+    </div>
+  )
+}
+
 function App() {
   useEffect(() => {
-    // Basic GSAP ScrollTrigger registration is globally done in individual files but safe here
     gsap.registerPlugin(ScrollTrigger)
 
     const lenis = new Lenis({
@@ -34,7 +46,8 @@ function App() {
       touchMultiplier: 2,
     })
 
-    // GSAP ScrollTrigger Sync
+    window.lenis = lenis
+
     lenis.on('scroll', ScrollTrigger.update)
 
     gsap.ticker.add((time) => {
@@ -45,6 +58,7 @@ function App() {
 
     return () => {
       lenis.destroy()
+      window.lenis = null
       gsap.ticker.remove((time) => {
         lenis.raf(time * 1000)
       })
@@ -57,13 +71,15 @@ function App() {
       <div className="relative flex flex-col min-h-screen w-full overflow-x-hidden noise-bg">
         <Navbar />
         <div className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/developers" element={<Developers />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <PageWrapper>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/work" element={<Work />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/developers" element={<Developers />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </PageWrapper>
         </div>
         <Footer />
       </div>

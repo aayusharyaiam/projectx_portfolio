@@ -1,17 +1,26 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 export default function ProjectCard({ project, index }) {
+  const [isLoaded, setIsLoaded] = useState(false)
+
   return (
     <div
       className="group flex flex-col gap-5"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-surface-800 bg-card">
+      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-surface-800 bg-surface-800/50">
+        {/* Skeletal Loading Animation */}
+        {!isLoaded && (
+          <div className="absolute inset-0 bg-gradient-to-r from-surface-800/0 via-surface-700/50 to-surface-800/0 animate-shimmer" style={{ backgroundSize: '200% 100%' }} />
+        )}
+        
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+          className={`w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           loading="lazy"
+          onLoad={() => setIsLoaded(true)}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
 

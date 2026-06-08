@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import AnimatedSection from '../components/AnimatedSection'
-import StatsCounter from '../components/StatsCounter'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -10,7 +9,7 @@ const timeline = [
   {
     year: '2023',
     title: 'The Beginning',
-    description: 'Founded by a group of passionate developers with a shared vision — to build digital products that actually matter. Started with small freelance projects and local hackathons.',
+    description: 'Founded by a group of passionate developers with a shared vision - to build digital products that actually matter. Started with small freelance projects and local hackathons.',
     highlights: ['First client project', 'Team of 2', 'Local hackathon wins'],
   },
   {
@@ -25,13 +24,6 @@ const timeline = [
     description: 'Launched Technika 2k25 and Prakrida 2k25 platforms serving thousands. Evolved into a full-service digital studio with a focus on performance and premium aesthetics.',
     highlights: ['Technika 2k25 & Prakrida 2k25', '10,000+ users served', 'Premium studio identity'],
   },
-]
-
-const impactStats = [
-  { label: 'Projects Shipped', value: 15, suffix: '+', trend: 'Since 2023' },
-  { label: 'Users Served', value: 10, suffix: 'K+', trend: 'Across platforms' },
-  { label: 'Lines of Code', value: 500, suffix: 'K+', trend: 'And counting' },
-  { label: 'Client Retention', value: 100, suffix: '%', trend: 'Repeat clients' },
 ]
 
 export default function About() {
@@ -116,16 +108,6 @@ export default function About() {
                 ))}
               </div>
             </div>
-          </div>
-        </AnimatedSection>
-
-        {/* Impact Metrics */}
-        <AnimatedSection className="mb-24">
-          <h2 className="text-3xl font-bold text-white font-display mb-12 text-center">Impact in Numbers</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {impactStats.map((stat, i) => (
-              <StatsCounter key={i} {...stat} />
-            ))}
           </div>
         </AnimatedSection>
 
