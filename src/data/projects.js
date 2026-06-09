@@ -137,15 +137,15 @@ export const projects = [
   },
   {
     id: 7,
-    title: 'BITP AI/ML 2025',
-    subtitle: '2nd International Conference Platform',
+    title: 'IMPACT 2025',
+    subtitle: 'International Conference on Machine Learning, Pattern Recognition, Automation and Computing',
     description:
-      'An upgraded version of the BITP conference platform featuring automated review assignments, intelligent session scheduling, multi-track virtual streaming, and improved accessibility features for researchers worldwide.',
+      'The official web portal for the IMPACT 2025 conference at BIT Mesra. Supported paper submission workflows, peer review notifications, speaker registrations, and live presentation streams for researchers worldwide.',
     image: bitpAiml2Img,
     tags: ['Next.js', 'PostgreSQL', 'TailwindCSS', 'GraphQL', 'AWS'],
     category: 'Conference Platform',
     year: '2025',
-    link: null,
+    link: 'https://impact2025.bitmesra.ac.in/',
     color: '#10B981',
     stats: {
       attendees: '2,100+',

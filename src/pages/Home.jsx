@@ -116,10 +116,12 @@ export default function Home() {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection stagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, i) => (
-              <ProjectCard key={project.id} project={project} index={i} />
-            ))}
+          <AnimatedSection stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {projects
+              .filter(p => ['IEEE SB BIT Patna', 'Technika 2k25', 'Prakrida 2k25', 'IMPACT 2025'].includes(p.title))
+              .map((project, i) => (
+                <ProjectCard key={project.id} project={project} index={i} />
+              ))}
           </AnimatedSection>
         </div>
       </section>

@@ -33,12 +33,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-primary/30 transition-shadow">
-            <span className="material-symbols-outlined text-white text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
-              terminal
-            </span>
-          </div>
-          <span className="text-xl font-bold tracking-tight text-white font-display">
+          <img src="/text_DevStudio.png" alt="DevStudio Text Logo" className="h-10 object-contain" />
+          <span className="hidden sm:block text-xl font-bold tracking-tight text-white font-display">
             DevStudio
           </span>
         </Link>

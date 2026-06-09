@@ -8,11 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-5">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="material-symbols-outlined text-white text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  terminal
-                </span>
-              </div>
+              <img src="/full_DevStudio.png" alt="DevStudio Full Logo" className="h-12 md:h-[5.5rem] object-contain" />
               <span className="text-xl font-bold text-white font-display">DevStudio</span>
             </Link>
             <p className="text-surface-500 text-sm leading-relaxed">
