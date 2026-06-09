@@ -63,18 +63,18 @@ export const stats = [
 
 export const testimonials = [
   {
-    quote: 'DevStudio transformed our vision into a reality faster than we thought possible. Their technical depth is truly unmatched in the industry.',
-    name: 'David Chen',
-    role: 'CTO, Nexus Finance',
+    quote: 'The platform for Technika 2k25 was a game-changer. The immersive 3D elements and smooth micro-interactions captivated our attendees instantly. Even better, the backend handled over 3,000 real-time registrations flawlessly without a single hiccup during peak traffic.',
+    name: 'Ashutosh Kumar',
+    role: 'Organizer, Technika',
   },
   {
-    quote: 'The level of polish they bring to both the code and the UI is incredible. They are more than a studio; they are a strategic partner.',
-    name: 'Sarah Jenkins',
-    role: 'CEO, Aura Shop',
+    quote: 'As the CSE department hosting an international conference for doctorate candidates, we needed precision. The platform delivered an incredibly smooth paper submission workflow and automated peer review system that completely streamlined our administrative overhead.',
+    name: 'Dr. Gyanendra Tiwary',
+    role: 'Chair, IMPACT 2025',
   },
   {
-    quote: 'Working with them was the best investment we made for our seed round. The MVP they built helped us raise $12M in just 3 weeks.',
-    name: 'Michael Ross',
-    role: 'Founder, Velo',
+    quote: 'Prakrida required a blazing-fast, mobile-first experience for players on the field. The live score tracking and dynamic team scheduling updated instantly across all devices. It truly became the central hub of our entire sports festival.',
+    name: 'Rohit Gupta',
+    role: 'Coordinator, Prakrida',
   },
 ]

@@ -26,17 +26,41 @@ export default function ProjectCard({ project, index }) {
 
         {/* Overlay info */}
         <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-primary text-white px-4 py-2 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 glow-hover"
-            >
-              Visit Live
-              <span className="material-symbols-outlined text-sm">open_in_new</span>
-            </a>
-          )}
+          <div className="flex flex-wrap gap-2">
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-primary text-white px-4 py-2 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 glow-hover"
+              >
+                Visit Live
+                <span className="material-symbols-outlined text-sm">open_in_new</span>
+              </a>
+            )}
+            {project.frontendRepo && (
+              <a
+                href={project.frontendRepo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-surface-800/80 backdrop-blur-sm text-white px-4 py-2 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 hover:bg-surface-700"
+              >
+                Frontend
+                <span className="material-symbols-outlined text-sm">code</span>
+              </a>
+            )}
+            {project.backendRepo && (
+              <a
+                href={project.backendRepo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-surface-800/80 backdrop-blur-sm text-white px-4 py-2 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 hover:bg-surface-700"
+              >
+                Backend
+                <span className="material-symbols-outlined text-sm">data_object</span>
+              </a>
+            )}
+          </div>
         </div>
 
         {/* Year badge */}

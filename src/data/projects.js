@@ -38,6 +38,8 @@ export const projects = [
     category: 'Web Platform',
     year: '2025',
     link: 'https://technikna-2-k25.vercel.app/',
+    frontendRepo: 'https://github.com/aayusharyaiam/technikna_2K25',
+    backendRepo: 'https://github.com/ikrishagarwal/technika-server',
     color: '#7C5CFF',
     stats: {
       users: '5,000+',
@@ -74,6 +76,8 @@ export const projects = [
     category: 'Web Platform',
     year: '2025',
     link: 'https://prakrida.in/',
+    frontendRepo: 'https://github.com/ShiftainAhmad/Prakida_Demon',
+    backendRepo: 'https://github.com/ikrishagarwal/prakrida-backend',
     color: '#5CE1FF',
     stats: {
       participants: '4,200+',
