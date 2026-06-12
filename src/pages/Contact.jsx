@@ -8,16 +8,54 @@ export default function Contact() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState(null)
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 4000)
+    setError(null)
+    setSending(true)
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/sharmashutosh02@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: 'New contact form message',
+          _captcha: 'false',
+        }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok || data.success === false) {
+        throw new Error(data.message || 'Unable to send message')
+      }
+
+      setSubmitted(true)
+      setFormData({ name: '', email: '', message: '' })
+      setTimeout(() => setSubmitted(false), 4000)
+    } catch (err) {
+      setError('Could not send message. Please try again later.')
+    } finally {
+      setSending(false)
+    }
   }
+
+  const mailtoLink = `mailto:sharmashutosh02@gmail.com?subject=${encodeURIComponent(
+    'Contact: ' + (formData.name || '')
+  )}&body=${encodeURIComponent(
+    (formData.message || '') + "\n\nFrom: " + (formData.email || '')
+  )}`
 
   return (
     <main className="pt-32 pb-24">
@@ -105,11 +143,24 @@ export default function Contact() {
                       />
                     </div>
 
+                    {error && (
+                      <div className="space-y-2">
+                        <p className="text-sm text-rose-400">{error}</p>
+                        <a
+                          href={mailtoLink}
+                          className="inline-block text-sm text-primary hover:underline"
+                        >
+                          Send via your email client
+                        </a>
+                      </div>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full bg-gradient-primary text-white py-4 rounded-xl font-bold text-lg glow-hover"
+                      disabled={sending}
+                      className={`w-full py-4 rounded-xl font-bold text-lg glow-hover ${sending ? 'bg-surface-700 text-surface-400 cursor-not-allowed' : 'bg-gradient-primary text-white'}`}
                     >
-                      Send Message
+                      {sending ? 'Sending...' : 'Send Message'}
                     </button>
                   </form>
                 )}
@@ -127,8 +178,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm font-bold text-surface-300">Email</p>
-                      <a href="mailto:hi@devstudio.com" className="text-sm text-surface-500 hover:text-primary transition-colors">
-                        hi@devstudio.com
+                      <a href="mailto:sharmashutosh02@gmail.com" className="text-sm text-surface-500 hover:text-primary transition-colors">
+                        sharmashutosh02@gmail.com
                       </a>
                     </div>
                   </div>

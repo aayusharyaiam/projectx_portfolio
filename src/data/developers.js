@@ -13,7 +13,7 @@ export const developers = [
       github: 'https://www.aayusharya.tech/',
       linkedin: 'https://www.linkedin.com/in/aayusharyaiam/',
       instagram: 'https://www.instagram.com/aayusharya_i_am/',
-      email: 'mailto:aayush10738@gmail.com'
+      email: 'mailto:aayusharya753@gmail.com'
     },
     color: '#7C5CFF',
   },
@@ -25,7 +25,7 @@ export const developers = [
     skills: ['Node.js', 'Python', 'Java', 'Figma', 'UI/UX', 'Selenium', 'MongoDB', 'PostgreSQL'],
     avatar: ashutoshImg,
     socials: {
-      github: 'https://github.com/Ashutosh9470',
+      github: 'ashutosh9470.github.io ',
       linkedin: 'https://www.linkedin.com/in/ashutosh-kumar-3624b332a/',
       instagram: 'https://www.instagram.com/sharmashutosh01/',
       email: 'mailto:sharmashutosh02@gmail.com'

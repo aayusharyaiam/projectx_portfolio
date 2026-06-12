@@ -50,7 +50,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6 font-display">Connect</h4>
             <ul className="flex flex-col gap-4 text-sm text-surface-500">
-              <li><a href="mailto:hi@devstudio.com" className="hover:text-primary transition-colors">hi@devstudio.com</a></li>
+              <li><a href="mailto:sharmashutosh02@gmail.com" className="hover:text-primary transition-colors">sharmashutosh02@gmail.com</a></li>
               <li><Link to="/contact" className="hover:text-primary transition-colors">Schedule a Call</Link></li>
               <li><a href="#" className="hover:text-primary transition-colors">Twitter (X)</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">LinkedIn</a></li>
